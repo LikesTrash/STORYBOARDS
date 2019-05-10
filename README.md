@@ -27,5 +27,5 @@ PAUSED
 
 MISC FILES
 =============
-- Use Renamer.py to rename all the osu files you're using.
-- Use renumberer.py to list down all the osu files you've renamed.
+- Use [Renamer.py](https://github.com/LikesTrash/STORYBOARDS/blob/master/misc%20stuffs/renamer.py) to rename all the osu files you're using.
+- Use [renumberer.py](https://github.com/LikesTrash/STORYBOARDS/blob/master/misc%20stuffs/number%20recorder.py) to list down all the osu files you've renamed.
