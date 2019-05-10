@@ -24,3 +24,8 @@ ABANDONED
 PAUSED
 =============
 
+
+MISC FILES
+=============
+Use Renamer.py to rename all the osu files you're using.
+Use renumberer.py to list down all the osu files you've renamed.
