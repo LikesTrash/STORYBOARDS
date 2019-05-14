@@ -5,6 +5,7 @@ import math
 
 # math.pi also works
 pi = 3.1415926
+spacing = 0
 song_folder = 'C:\\Users\\David Jiang\\AppData\\Local\\osu!\\Songs\\949955 Kano - DAYBREAK FRONTLINE'
 sb_filename = 'Kano - DAYBREAK FRONTLINE (ArcherSelwyn).osb'
 
