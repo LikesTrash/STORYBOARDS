@@ -3,6 +3,8 @@ from tools.LyricsParser import *
 import random
 import math
 
+# math.pi also works
+pi = 3.1415926
 song_folder = 'C:\\Users\\David Jiang\\AppData\\Local\\osu!\\Songs\\949955 Kano - DAYBREAK FRONTLINE'
 sb_filename = 'Kano - DAYBREAK FRONTLINE (ArcherSelwyn).osb'
 
@@ -40,8 +42,8 @@ Sentences = LP.get_sentences()
 #now render
 CR.render()
 
-
 #Used in LyricsTime
+
 def genLyric(sentence, posx, posy, start_t, end_t, scale=0.6):
     objs = []
     x = posx
@@ -64,6 +66,12 @@ def lyricsTime(lp):
     objs = Scene()
     objs.append(genLyric(lp.sentences[0], -35, 380, 59, 115173))
     return objs
+
+
+
+
+
+
 
 
 
