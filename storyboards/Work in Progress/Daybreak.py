@@ -35,28 +35,28 @@ def SakuraEffect():
 
 
 
-CR = CharacterRenderer(font_path='Fonts/OKURIBITO.ttf', file_path='SB/let/')
+CR = CharacterRenderer(font_path='Fonts/togalite-medium.otf', file_path='SB/letters/')
 # CR is a CharacterRenderer defined before
-LP = LyricParser(CR)
-LP.ass_reader('Subtitles\daybreakfinal.ass')
-Sentences = LP.get_sentences()
+screentext = LyricParser(CR)
+screentext.ass_reader('Subtitles\daybreakfinal.ass')
+Sentences = screentext.get_sentences()
 #now render
 CR.render()
 
 #Used in LyricsTime
 
-def genLyric(sentence, posx, posy, start_t, end_t, scale=0.6):
+def genLyric(sentence, posx, posy, start_t, end_t, scale=0.4):
     objs = []
     x = posx
     y = posy
     movespeed = 0.005
     for ch in sentence.letters:
-        dt = random.randint(-200, 200)
+        dt = random.randint(-200, 80)
         obj = Object(ch.filename, origin='BottomLeft')
         obj.Move(start_t - 300, end_t + 400, x, y, x + movespeed*(end_t-start_t+700), y)
         obj.Fade(start_t + dt - 100, start_t + dt + 400, 0, 1)
         obj.Fade(end_t + dt - 200, end_t + dt + 200, 1, 0)
-        obj.Color(start_t, [0,0,0])
+        obj.Color(start_t, [255,255,255])
         obj.Scale(start_t, scale)
         x += (ch.width + spacing) * scale
         objs.append(obj)
@@ -65,14 +65,46 @@ def genLyric(sentence, posx, posy, start_t, end_t, scale=0.6):
 
 def lyricsTime(lp):
     objs = Scene()
-    objs.append(genLyric(lp.sentences[0], -35, 380, 59, 115173))
+    objs.append(genLyric(lp.sentences[0], 90, 400, 59, 2340))
+    objs.append(genLyric(lp.sentences[1], 90, 400, 2342, 5670))
+    objs.append(genLyric(lp.sentences[2], 90, 400, 5760, 9610))
+    objs.append(genLyric(lp.sentences[3], 90, 400, 9670, 11910))
+    objs.append(genLyric(lp.sentences[4], 90, 400, 11970, 13530))
+    objs.append(genLyric(lp.sentences[5], 90, 400, 13640, 15100))
+    objs.append(genLyric(lp.sentences[6], 90, 400, 15170, 16650))
+    objs.append(genLyric(lp.sentences[7], 90, 400, 16720, 19210))
+    objs.append(genLyric(lp.sentences[8], 90, 400, 19270, 21630))
+    objs.append(genLyric(lp.sentences[9], 90, 400, 21700, 23960))
+    objs.append(genLyric(lp.sentences[10], 90, 400, 24050, 26380))
+    objs.append(genLyric(lp.sentences[11], 90, 400, 26440, 29480))
+    objs.append(genLyric(lp.sentences[12], 90, 400, 29660, 31800))
+    objs.append(genLyric(lp.sentences[13], 90, 400, 31910, 33450))
+    objs.append(genLyric(lp.sentences[14], 90, 400, 33550, 35410))
+    objs.append(genLyric(lp.sentences[15], 90, 400, 35420, 36090))
+    objs.append(genLyric(lp.sentences[16], 90, 400, 36120, 37710))
+    objs.append(genLyric(lp.sentences[17], 90, 400, 37740, 38690))
+    objs.append(genLyric(lp.sentences[18], 90, 400, 38720, 40930))
+    objs.append(genLyric(lp.sentences[19], 90, 400, 41040, 42040))
+    objs.append(genLyric(lp.sentences[20], 90, 400, 42060, 45900))
+    objs.append(genLyric(lp.sentences[21], 90, 400, 45930, 48300))
+    objs.append(genLyric(lp.sentences[22], 90, 400, 48310, 50430))
+    objs.append(genLyric(lp.sentences[23], 90, 400, 50500, 52650))
+    objs.append(genLyric(lp.sentences[24], 90, 400, 52740, 55250))
+    objs.append(genLyric(lp.sentences[25], 90, 400, 55290, 56250))
+    objs.append(genLyric(lp.sentences[26], 90, 400, 56340, 58870))
+    objs.append(genLyric(lp.sentences[27], 90, 400, 77750, 78930))
+    objs.append(genLyric(lp.sentences[28], 90, 400, 79040, 82260))
+    objs.append(genLyric(lp.sentences[29], 90, 400, 82570, 84040))
+
+
+
+
     return objs
 
 
 
 
-
-
+screen = lyricsTime(screentext)
 
 
 
@@ -80,10 +112,9 @@ def lyricsTime(lp):
 SBManager = StoryboardManager(song_folder, sb_filename, create_backup=True)
 
 skr = SakuraEffect()
-lrt = lyricsTime
 
 SBManager.append_scene(skr)
-SBManager.append_scene(lrt)
+SBManager.append_scene(screen)
 
 SBManager.generate_storyboard(diff_specific=True)
 SBManager.delete_backups()
