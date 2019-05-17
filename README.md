@@ -10,8 +10,11 @@ SEMI-COMPLETE (TO SOME EXTENT FUNCTIONAL)
 
 WORK IN PROGRESS
 =============
+- [KANO - Daybreak Frontline](https://osu.ppy.sh/beatmapsets/949955#osu/1983561)
+    - [DaybreakFrontline.py](https://github.com/LikesTrash/STORYBOARDS/blob/master/storyboards/DaybreakFrontline.py)
+    
 - [YURA HATSUKI - Sweet Halloween](https://osu.ppy.sh/beatmapsets/968733#osu/2026953)
-    - [SweetHalloween.py](https://github.com/LikesTrash/STORYBOARDS/blob/master/storyboards/SweetHalloween.py)
+    - [SweetHalloween.py](https://github.com/LikesTrash/STORYBOARDS/blob/master/storyboards/Work%20in%20Progress/SweetHalloween.py)
 
 PLANNING
 =============
