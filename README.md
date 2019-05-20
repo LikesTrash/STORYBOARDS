@@ -5,7 +5,7 @@ COMPLETE
 SEMI-COMPLETE (TO SOME EXTENT FUNCTIONAL)
 =============
 - [KANO - Daybreak Frontline](https://osu.ppy.sh/beatmapsets/949955#osu/1983561)
-    - [DaybreakFrontline.py](https://github.com/LikesTrash/STORYBOARDS/blob/master/storyboards/DaybreakFrontline.py)
+    - [DaybreakFrontline.py](https://github.com/LikesTrash/STORYBOARDS/blob/master/Storyboard%20Code/DaybreakFrontline.py)
 
 
 WORK IN PROGRESS
