@@ -65,7 +65,8 @@ def genLyric(sentence, posx, posy, start_t, end_t, scale=0.4):
 
 def lyricsTime(lp):
     objs = Scene()
-    objs.append(genLyric(lp.sentences[0], 90, 400, 59, 2340))
+    #                           sentence, posx, posy, start_t, end_t,  (0 = 1, 1 = 2 on aegisub so don't mess up.)
+    objs.append(genLyric(lp.sentences[0], 90, 400, 922, 2340))
     objs.append(genLyric(lp.sentences[1], 90, 400, 2342, 5670))
     objs.append(genLyric(lp.sentences[2], 90, 400, 5760, 9610))
     objs.append(genLyric(lp.sentences[3], 90, 400, 9670, 11910))
@@ -95,17 +96,47 @@ def lyricsTime(lp):
     objs.append(genLyric(lp.sentences[27], 90, 400, 77750, 78930))
     objs.append(genLyric(lp.sentences[28], 90, 400, 79040, 82260))
     objs.append(genLyric(lp.sentences[29], 90, 400, 82570, 84040))
-
-
-
+    objs.append(genLyric(lp.sentences[30], 90, 400, 84100, 86390))
+    objs.append(genLyric(lp.sentences[31], 90, 400, 86480, 88610))
+    objs.append(genLyric(lp.sentences[32], 90, 400, 88640, 91240))
+    objs.append(genLyric(lp.sentences[33], 90, 400, 91290, 93490))
+    objs.append(genLyric(lp.sentences[34], 90, 400, 93500, 95510))
+    objs.append(genLyric(lp.sentences[35], 90, 400, 95560, 96970))
+    objs.append(genLyric(lp.sentences[36], 90, 400, 97010, 98120))
+    objs.append(genLyric(lp.sentences[37], 90, 400, 98180, 99490))
+    objs.append(genLyric(lp.sentences[38], 90, 400, 99560, 101120))
+    objs.append(genLyric(lp.sentences[39], 90, 400, 101180, 103130))
+    objs.append(genLyric(lp.sentences[40], 90, 400, 103290, 104270))
+    objs.append(genLyric(lp.sentences[41], 90, 400, 104510, 106300))
+    objs.append(genLyric(lp.sentences[42], 90, 400, 106580, 108520))
+    objs.append(genLyric(lp.sentences[43], 90, 400, 108530, 110260))
+    objs.append(genLyric(lp.sentences[44], 90, 400, 110360, 112910))
+    objs.append(genLyric(lp.sentences[45], 90, 400, 112920, 115050))
+    objs.append(genLyric(lp.sentences[46], 90, 400, 115130, 120880))
+    objs.append(genLyric(lp.sentences[47], 90, 400, 124960, 129610))
+    objs.append(genLyric(lp.sentences[48], 90, 400, 153670, 156080))
+    objs.append(genLyric(lp.sentences[49], 90, 400, 156170, 157660))
+    objs.append(genLyric(lp.sentences[50], 90, 400, 157710, 160830))
+    objs.append(genLyric(lp.sentences[51], 90, 400, 160890, 162030))
+    objs.append(genLyric(lp.sentences[52], 90, 400, 162080, 163410))
+    objs.append(genLyric(lp.sentences[53], 90, 400, 163460, 165760))
+    objs.append(genLyric(lp.sentences[54], 90, 400, 165860, 167870))
+    objs.append(genLyric(lp.sentences[55], 90, 400, 167930, 170460))
+    objs.append(genLyric(lp.sentences[56], 90, 400, 170720, 173200))
+    objs.append(genLyric(lp.sentences[57], 90, 400, 173220, 175280))
+    objs.append(genLyric(lp.sentences[58], 90, 400, 175340, 176380))
+    objs.append(genLyric(lp.sentences[59], 90, 400, 176420, 180500))
+    objs.append(genLyric(lp.sentences[60], 90, 400, 180080, 182720))
+    objs.append(genLyric(lp.sentences[61], 90, 400, 182760, 184810))
+    objs.append(genLyric(lp.sentences[62], 90, 400, 184890, 187040))
+    objs.append(genLyric(lp.sentences[63], 90, 400, 187110, 189630))
+    objs.append(genLyric(lp.sentences[64], 90, 400, 189670, 190690))
+    objs.append(genLyric(lp.sentences[65], 90, 400, 190770, 200330))
 
     return objs
 
 
-
-
 screen = lyricsTime(screentext)
-
 
 
 # Create StoryboardManager {
